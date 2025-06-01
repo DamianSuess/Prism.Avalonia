@@ -2,7 +2,7 @@
 
 Change log history for Prism.Avalonia
 
-## v9.0.537.11300 (2025-06-01)
+## v9.0.537.11300-pre (2025-06-01)
 
 * Upgraded to Avalonia v11.3.0
 * .NET 9 supported
