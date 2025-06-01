@@ -19,7 +19,9 @@
 ![Logo](https://raw.githubusercontent.com/AvaloniaCommunity/Prism.Avalonia/develop/images/Prism.Avalonia.png)
 </center>
 
- [Prism.Avalonia](https://github.com/AvaloniaCommunity/Prism.Avalonia) provides your cross-platform [Avalonia](https://avaloniaui.net/) apps with [Prism library](https://github.com/PrismLibrary/Prism) support so you can **Navigate**, create **Dialog Windows** and **Notifications**, provide **Dependency Injection** and internal **Messaging** easier than before!  To help get started, check out the _[official Prism.Avalonia Templates](https://github.com/SuessLabs/Prism.Avalonia.Templates)_ for Visual Studio.
+ [Prism.Avalonia](https://github.com/AvaloniaCommunity/Prism.Avalonia) provides your cross-platform [Avalonia](https://avaloniaui.net/) apps with [Prism library](https://github.com/PrismLibrary/Prism) support so you can **Navigate**, create **Dialog Windows** and **Notifications**, provide **Dependency Injection** and internal **Messaging** easier than before!
+ 
+ To help get started, check out the official _[Prism.Avalonia Templates](https://github.com/SuessLabs/Prism.Avalonia.Templates)_ for Visual Studio.
 
 **For more samples outside of this repo, check out:**
 
@@ -83,16 +85,10 @@ Issues posted without a description may be closed immediately. Use the discussio
 
 Add the Prism.Avalonia and its DryIoc packages to your project:
 
-<!--
-# Avalonia v11.1 - Latest Release
-Install-Package Prism.Avalonia -Version 9.0.537.11130
-Install-Package Prism.DryIoc.Avalonia -Version 9.0.537.11130
--->
-
 ```powershell
-# Legacy: Avalonia v11.0
-Install-Package Prism.Avalonia -Version 8.1.97.11073
-Install-Package Prism.DryIoc.Avalonia -Version 8.1.97.11073
+# Install the latest
+Install-Package Prism.Avalonia
+Install-Package Prism.DryIoc.Avalonia
 
 # Legacy: Avalonia v0.10.1021
 Install-Package Prism.Avalonia -Version 8.1.97.1021
@@ -100,6 +96,8 @@ Install-Package Prism.DryIoc.Avalonia -Version 8.1.97.1021
 ```
 
 ## How to use
+
+See, `e2e` folder for more samples. The following is based on the "SampleBaseApp" project.
 
 ### Program.cs
 
@@ -120,13 +118,12 @@ internal sealed class Program
     .StartWithClassicDesktopLifetime(args);
 
   // Avalonia configuration, don't remove; also used by visual designer.
-  public static AppBuilder BuildAvaloniaApp()
-    => AppBuilder.Configure<App>()
-        .UsePlatformDetect()
-        .WithInterFont()
-        .LogToTrace();
+  public static AppBuilder BuildAvaloniaApp() =>
+    AppBuilder.Configure<App>()
+              .UsePlatformDetect()
+              .WithInterFont()
+              .LogToTrace();
 }
-
 ```
 
 ### App.axaml
