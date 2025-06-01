@@ -85,16 +85,10 @@ Issues posted without a description may be closed immediately. Use the discussio
 
 Add the Prism.Avalonia and its DryIoc packages to your project:
 
-<!--
-# Avalonia v11.1 - Latest Release
-Install-Package Prism.Avalonia -Version 9.0.537.11130
-Install-Package Prism.DryIoc.Avalonia -Version 9.0.537.11130
--->
-
 ```powershell
-# Legacy: Avalonia v11.0
-Install-Package Prism.Avalonia -Version 8.1.97.11073
-Install-Package Prism.DryIoc.Avalonia -Version 8.1.97.11073
+# Install the latest
+Install-Package Prism.Avalonia
+Install-Package Prism.DryIoc.Avalonia
 
 # Legacy: Avalonia v0.10.1021
 Install-Package Prism.Avalonia -Version 8.1.97.1021
@@ -102,6 +96,8 @@ Install-Package Prism.DryIoc.Avalonia -Version 8.1.97.1021
 ```
 
 ## How to use
+
+See, `e2e` folder for more samples. The following is based on the "SampleBaseApp" project.
 
 ### Program.cs
 
@@ -122,13 +118,12 @@ internal sealed class Program
     .StartWithClassicDesktopLifetime(args);
 
   // Avalonia configuration, don't remove; also used by visual designer.
-  public static AppBuilder BuildAvaloniaApp()
-    => AppBuilder.Configure<App>()
-        .UsePlatformDetect()
-        .WithInterFont()
-        .LogToTrace();
+  public static AppBuilder BuildAvaloniaApp() =>
+    AppBuilder.Configure<App>()
+              .UsePlatformDetect()
+              .WithInterFont()
+              .LogToTrace();
 }
-
 ```
 
 ### App.axaml
