@@ -2,6 +2,10 @@
 
 Change log history for Prism.Avalonia
 
+## v9.0.537.11300 (2025-06-01)
+
+* Upgraded to Avalonia v11.3.0
+
 ## v9.0.537.11130 (2024-08-24)
 
 * Upgraded to Prism v9.0.537
