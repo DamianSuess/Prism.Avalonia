@@ -220,4 +220,13 @@ See, [Code of Conduct](.github/Code-of-Conduct.md)
 
 See, [Security](.github/Security.md)
 
+## Used By
+
+Want to see your project listed? Let us know!
+
+* https://github.com/one-ware/OneWare
+* https://github.com/Nepitwin/I18N.Avalonia
+* https://github.com/CrackAndDie/Abdrakov.Container
+* https://github.com/CrackAndDie/Hypocrite.Services
+
 **Sponsored by:** [Suess Labs](https://suesslabs.com) a subsidary of Xeno Innovations, Inc.
